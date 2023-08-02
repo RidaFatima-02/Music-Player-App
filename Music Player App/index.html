@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div>
+                <h3>Music Player</h3>
+            </div>
+            <div class="icons">
+                <div class="icon"><i class="ri-notification-line"></i></div>
+                <div class="icon"><i class="ri-time-line"></i></div>
+                <div class="icon"><i class="ri-play-list-line" id="menu" title="Playlists"></i></div>
+            </div>
+        </div>
+
+
+        <section class="cards">
+            <div class="play-header">
+                <div><i class="fa-solid fa-angle-down"></i></div>
+                <div> Now Playing</div>
+                <div><i class="ri-git-commit-line"></i></div>
+            </div>
+
+            <div class="player-details">
+                <div>
+                    <img src="./assets/images/Obsessed.jpg" alt="" class="track-image">
+
+                </div>
+
+                <div class="title-bar">
+                    <div>
+                        <p class="title">title</p>
+                        <p class="artist">artist</p>
+                    </div>
+                    <div class="heart"><i class="ri-heart-fill heart-icon"></i></div>
+                </div>
+
+                <!-- time range -->
+                <div class="duration">
+                    <input type="range" min="0" max="100" value="0" title="range" class="duration-slider">
+
+                </div>
+
+
+                <!-- time duration -->
+                <div class="controls">
+                    <div class="song-timer">
+                        <span class="current-time">00:00</span>
+                        <span class="duration-time">00:00</span>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="buttons">
+                    <button class="shuffle" title="shuffle"><i class="fa-solid fa-shuffle shuffle-icon"></i></button>
+                    <button class="prev" title="prev"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="play" title="play"><i class="fa-solid fa-play"></i></button>
+                    <button class="next" title="next"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="repeat" title="repeat"><i class="fa-solid fa-repeat repeat-icon"></i></button>
+
+                </div>
+
+                <div class="valume1">
+                    <i class="ri-volume-up-fill" id="volume-icon"></i> <input type="range" min="0" max="100" value="50"
+                        title="range" id="volume">
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="music-playlist">
+
+                <div class="list-header">
+                    <h3>Playlists</h3>
+                    <hr>
+                </div>
+
+                <!-- playlist javascipt thought render -->
+                <div class="playlist-div">
+                    <!-- <div class="playlist">
+                        <span class="song-index">1</span>
+                        <p class="single-song">songs</p>
+                    </div> -->
+
+                </div>
+
+            </div>
+        </section>
+
+
+    </div>
+
+
+
+
+
+    <script src="/songs.js"></script>
+    <script src="./app.js"></script>
+</body>

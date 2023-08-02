@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora&family=Nunito&family=Poppins:wght@400;500;600;800&family=Roboto:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+    font-weight: 500;
+}
+
+body {
+    background-color: rgb(77, 119, 117);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 22rem;
+    height: 35rem;
+    background-color:rgb(45, 59, 59);
+    border-radius: 2rem;
+    padding: 0.8rem;
+    color: white;
+    
+
+}
+
+.header,
+.icons {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: blueviolet; */
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+
+.icon i {
+    font-size: 1.3rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 50%;
+
+    
+    transition: all 0.3s ease;
+}
+
+.icon i:hover {
+ 
+    background-color: rgb(69, 129, 126);
+   
+}
+
+.cards {
+    background:linear-gradient( rgb(94, 139, 134),black);
+    height: 30rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+
+.player-details {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.player-details img {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.play-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.play-header i {
+    font-size: 1.5rem;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.3rem;
+}
+.title
+{
+    font-size: 1.3rem;
+}
+.artist
+{
+    font-size: 0.9rem;
+    color: grey;
+}
+.title-bar .heart {
+    color: rgb(176, 168, 168);
+    font-size: 1.3rem;
+}
+.red
+{
+    color: red;
+}
+.duration input {
+    width: 100%;
+    accent-color:rgb(65, 168, 163) ;
+}
+
+.song-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    border: 2px solid rgb(100, 97, 97);
+    border-radius: 12px;
+    padding: 0.3rem;
+}
+.buttons button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50%;
+    color:rgba(255, 255, 255, 0.682) ;
+    
+}
+
+.buttons button:hover{
+    background-color: #7e7878;
+    transition: all 0.3s ease;
+    
+}
+.active
+{
+    background-color: rgb(66, 106, 104);
+}
+
+.valume1
+{
+    margin-top: 1rem;
+}
+.valume1 input[type="range"]
+{
+    width: 20%;
+    accent-color: rgb(64, 193, 187);
+   
+
+}
+.green
+{
+    color: green;
+}
+
+
+/* playlist work */
+.music-playlist {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color:rgb(69, 94, 94);
+   
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    overflow: auto;
+    
+}
+.music-playlist::-webkit-scrollbar-thumb
+{
+    background-color:rgb(96, 184, 184); ;
+    outline:  1px solid slategray;
+}
+.music-playlist::-webkit-scrollbar {
+    width: 0.2em;
+}
+ 
+.music-playlist::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+.toggle {
+    height: 54%;
+}
+.hide
+{
+    height: 0;
+}
+.list-header
+{
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.playlist
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid rgb(69, 129, 126);
+    padding: 0.3rem;
+    transition: all 0.3s ease;
+    
+    
+}
+.playlist:hover
+{
+    background-color: rgb(69, 129, 126);
+}
+
+.single-song{
+    /* background-color: aqua; */
+    width: 100%;
+    text-align: left;
+}
+  
+
+@media (max-width:400px) {
+
+    body{
+        padding: 0.3rem;
+    }
+ 
+    .container {
+        width: 100%;
+        padding: 0.5rem;
+       
+        
+    
+    }
+    .header{
+        padding: 0.3rem 0.5rem;
+    }
+    .cards{
+        padding: 0.5rem 0.5rem;
+    }
+    .title {
+        font-size: 1.2rem;
+      }
+
+    
+}
